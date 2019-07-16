@@ -8,7 +8,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.utils.decorators import cached_classmethod
 
 
-class HomePage(Page):
+class BasicPage(Page):
     body = StreamField([
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
