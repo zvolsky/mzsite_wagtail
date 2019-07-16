@@ -120,9 +120,9 @@ WSGI_APPLICATION = 'multisite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-POSTGRES = False
+POSTGRES = True
 
-if POSTGRES:
+if POSTGRES:   # createdb mzsite -U postgres
     DATABASES = {
         "default": env.db("DATABASE_URL", default="postgres:///mzsite")
     }
